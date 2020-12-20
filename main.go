@@ -1,17 +1,20 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
 	"log"
+	"net/http"
 
-	"github.com/Dozi0116/go-nopaste/C"
+	"./c"
 )
 
 func main() {
 	// hosting address
-	http.HandleFunc("/", C.Hello)
-	err := http.ListenAndServe(":12345", nil)
+	http.HandleFunc("/", c.Hello)
+	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
-		log.Exit("ListenAndServe: ", err.String())
+		log.Panic(err)
+	} else {
+		fmt.Println("something wrong")
 	}
 }

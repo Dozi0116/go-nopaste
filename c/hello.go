@@ -1,6 +1,6 @@
-package C/Hello
+package c
 
-import {
+import (
 	"net/http"
 	"io"
 )
