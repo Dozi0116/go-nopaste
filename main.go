@@ -5,12 +5,13 @@ import (
 	"log"
 	"net/http"
 
-	"./c"
+	"./route"
 )
 
 func main() {
 	// hosting address
-	http.HandleFunc("/", c.Hello)
+	route.Registration()
+
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil {
 		log.Panic(err)
