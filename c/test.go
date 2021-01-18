@@ -7,7 +7,7 @@ import (
 )
 
 func Page(w http.ResponseWriter, req *http.Request) {
-	render, err := template.ParseFiles("../template/page.html")
+	render, err := template.ParseFiles("template/page.html")
 	if err != nil {
 		log.Fatalf("template error: %v", err)
 	}
