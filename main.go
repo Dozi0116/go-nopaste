@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"./route"
+	"github.com/Dozi0116/go-nopaste/route"
 )
 
 func main() {

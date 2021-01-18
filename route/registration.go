@@ -11,4 +11,5 @@ func Registration() {
 	http.HandleFunc("/", c.Hello)
 
 	http.HandleFunc("/hoge", c.Hoge)
+	http.HandleFunc("/page", c.Page)
 }

@@ -17,3 +17,4 @@ func Hoge(w http.ResponseWriter, req *http.Request) {
 	`
 	io.WriteString(w, page)
 }
+
