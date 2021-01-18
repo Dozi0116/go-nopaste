@@ -4,7 +4,7 @@ package route
 import (
 	"net/http"
 
-	"../c"
+	"github.com/Dozi0116/go-nopaste/c"
 )
 
 func Registration() {
