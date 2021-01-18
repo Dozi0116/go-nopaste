@@ -18,7 +18,7 @@ func Page(w http.ResponseWriter, req *http.Request) {
 	if err := t.Execute(w, struct {
 		Message string
 	}{
-		Message "umekomi"
+		Message: "umekomi",
 	}); err != nil {
 		log.Printf("failed to execute template: %v", err)
 	}
