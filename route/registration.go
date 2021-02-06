@@ -2,14 +2,18 @@
 package route
 
 import (
-	"net/http"
+	"github.com/julienschmidt/httprouter"
 
 	"github.com/Dozi0116/go-nopaste/c"
 )
 
-func Registration() {
-	http.HandleFunc("/", c.Hello)
+func Registration(router *httprouter.Router) {
+	router.GET("/", c.Hello)
 
-	http.HandleFunc("/hoge", c.Hoge)
-	http.HandleFunc("/page", c.Page)
+	router.GET("/hoge", c.Hoge)
+	router.GET("/page", c.Page)
+
+	router.GET("/api/message", c.GetMessageList)
+	router.POST("/api/message", c.PostMessage)
+	router.GET("/api/message/id", c.GetMessageById)
 }

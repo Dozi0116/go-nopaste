@@ -4,9 +4,11 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
-func Page(w http.ResponseWriter, req *http.Request) {
+func Page(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
 	render, err := template.ParseFiles("template/page.html")
 	if err != nil {
 		log.Fatalf("template error: %v", err)
